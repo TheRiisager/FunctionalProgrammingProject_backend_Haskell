@@ -1,7 +1,5 @@
-# Change log
+# Revision history for FunctionalProgrammingProject-backend-Haskell
 
-backend uses [Semantic Versioning][].
-The change log is available through the [releases on GitHub][].
+## 0.1.0.0 -- YYYY-mm-dd
 
-[Semantic Versioning]: http://semver.org/spec/v2.0.0.html
-[releases on GitHub]: https://github.com/githubuser/backend/releases
+* First version. Released on an unsuspecting world.
