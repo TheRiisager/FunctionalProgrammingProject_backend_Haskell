@@ -13,18 +13,22 @@ import Web.Scotty
 import Data.Aeson (FromJSON, ToJSON)
 import GHC.Generics
 import Hello
+import StringTools
 import qualified Data.Text.Lazy as L
 
 main :: IO ()
 main = do -- IO Monad
-  putStrLn "Startin Server at 4711 ..."
-  scotty 4711 $ do -- ScottyM Monad
+  putStrLn "Startin Server at 4712 ..."
+  scotty 4712 $ do -- ScottyM Monad
     middleware $ cors (const $ Just appCorsResourcePolicy)
-    get "/hello" $ do  -- ActionM
+    get "/hello" $ do
       text "Hello World!"
     post "/helloMessage" $ do
         hello <- jsonData :: ActionM Hello
         json $ getHelloText hello
+    get "/countWords" $ do
+        receivedData <- jsonData :: ActionM ReceivedData
+        json $ makeData receivedData
 
 appCorsResourcePolicy :: CorsResourcePolicy
 appCorsResourcePolicy =
