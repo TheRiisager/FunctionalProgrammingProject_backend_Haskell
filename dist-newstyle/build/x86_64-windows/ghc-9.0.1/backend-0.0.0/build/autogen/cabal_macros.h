@@ -10,6 +10,16 @@
   (major1) == 0 && (major2) <  0 || \
   (major1) == 0 && (major2) == 0 && (minor) <= 0)
 #endif /* MIN_VERSION_backend */
+/* package aeson-1.5.6.0 */
+#ifndef VERSION_aeson
+#define VERSION_aeson "1.5.6.0"
+#endif /* VERSION_aeson */
+#ifndef MIN_VERSION_aeson
+#define MIN_VERSION_aeson(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  5 || \
+  (major1) == 1 && (major2) == 5 && (minor) <= 6)
+#endif /* MIN_VERSION_aeson */
 /* package base-4.15.0.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.15.0.0"
@@ -20,6 +30,46 @@
   (major1) == 4 && (major2) <  15 || \
   (major1) == 4 && (major2) == 15 && (minor) <= 0)
 #endif /* MIN_VERSION_base */
+/* package scotty-0.12 */
+#ifndef VERSION_scotty
+#define VERSION_scotty "0.12"
+#endif /* VERSION_scotty */
+#ifndef MIN_VERSION_scotty
+#define MIN_VERSION_scotty(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  12 || \
+  (major1) == 0 && (major2) == 12 && (minor) <= 0)
+#endif /* MIN_VERSION_scotty */
+/* package split-0.2.3.4 */
+#ifndef VERSION_split
+#define VERSION_split "0.2.3.4"
+#endif /* VERSION_split */
+#ifndef MIN_VERSION_split
+#define MIN_VERSION_split(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 3)
+#endif /* MIN_VERSION_split */
+/* package text-1.2.4.1 */
+#ifndef VERSION_text
+#define VERSION_text "1.2.4.1"
+#endif /* VERSION_text */
+#ifndef MIN_VERSION_text
+#define MIN_VERSION_text(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  2 || \
+  (major1) == 1 && (major2) == 2 && (minor) <= 4)
+#endif /* MIN_VERSION_text */
+/* package wai-cors-0.2.7 */
+#ifndef VERSION_wai_cors
+#define VERSION_wai_cors "0.2.7"
+#endif /* VERSION_wai_cors */
+#ifndef MIN_VERSION_wai_cors
+#define MIN_VERSION_wai_cors(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 7)
+#endif /* MIN_VERSION_wai_cors */
 
 /* tool gcc-10.2.0 */
 #ifndef TOOL_VERSION_gcc
