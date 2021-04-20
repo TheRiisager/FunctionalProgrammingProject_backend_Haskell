@@ -6,11 +6,20 @@ import Data.Aeson (FromJSON, ToJSON)
 import Data.List.Split
 import Data.Char
 
+data maybe2 = Just | Nothing
+
+data ReceivedNumbers = ReceivedNumbers
+    { firstNumber :: Int
+    , secondNumber :: Int
+    } deriving(Show, Generic)
+
+
 
 data ReceivedData = ReceivedData
     { receivedText :: String
     , word :: String
     } deriving(Show, Generic)
+
 
 data SendData = SendData
     { wordCount :: Int 
@@ -32,3 +41,7 @@ cleanText text =
 makeData :: ReceivedData -> SendData
 makeData dataReceived = 
     SendData (countWords dataReceived) (word dataReceived)
+
+
+
+

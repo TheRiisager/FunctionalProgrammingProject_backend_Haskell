@@ -30,12 +30,12 @@ version :: Version
 version = Version [0,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "C:\\Users\\benja\\AppData\\Roaming\\cabal\\bin"
-libdir     = "C:\\Users\\benja\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-9.0.1\\backend-0.0.0-inplace-backend"
-dynlibdir  = "C:\\Users\\benja\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-9.0.1"
-datadir    = "C:\\Users\\benja\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-9.0.1\\backend-0.0.0"
-libexecdir = "C:\\Users\\benja\\AppData\\Roaming\\cabal\\backend-0.0.0-inplace-backend\\x86_64-windows-ghc-9.0.1\\backend-0.0.0"
-sysconfdir = "C:\\Users\\benja\\AppData\\Roaming\\cabal\\etc"
+bindir     = "C:\\Users\\ckfol\\AppData\\Roaming\\cabal\\bin"
+libdir     = "C:\\Users\\ckfol\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-9.0.1\\backend-0.0.0-inplace-backend"
+dynlibdir  = "C:\\Users\\ckfol\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-9.0.1"
+datadir    = "C:\\Users\\ckfol\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-9.0.1\\backend-0.0.0"
+libexecdir = "C:\\Users\\ckfol\\AppData\\Roaming\\cabal\\backend-0.0.0-inplace-backend\\x86_64-windows-ghc-9.0.1\\backend-0.0.0"
+sysconfdir = "C:\\Users\\ckfol\\AppData\\Roaming\\cabal\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "backend_bindir") (\_ -> return bindir)

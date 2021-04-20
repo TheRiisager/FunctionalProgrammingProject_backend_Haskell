@@ -20,12 +20,13 @@ main :: IO ()
 main = do -- IO Monad
   putStrLn "Startin Server at 4712 ..."
   scotty 4712 $ do -- ScottyM Monad
-    middleware $ cors (const $ Just appCorsResourcePolicy)
-    get "/hello" $ do
-      text "Hello World!"
+    middleware $ cors $ const $ Just appCorsResourcePolicy -- $ erstatter paranteser
+    -- middleware (cors (const (just appCorsResourcePolicy)))
+    get "/hello" $ do -- første endpoint (Localhost/hello)
+      text "Hello World!" -- Return værdi af /hello endpoint
     post "/helloMessage" $ do
-        hello <- jsonData :: ActionM Hello
-        json $ getHelloText hello
+        hello <- jsonData :: ActionM Hello -- ActioM stammer fra scotty biblioteket. "Det gør det muligt at transformere jason data, ind til en haskell data type"?
+        json $ getHelloText hello -- Retur værdi fra
     get "/countWords" $ do
         receivedData <- jsonData :: ActionM ReceivedData
         json $ makeData receivedData
