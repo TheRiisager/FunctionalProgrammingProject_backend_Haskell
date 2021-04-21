@@ -33,6 +33,8 @@ main = do -- IO Monad
     get "/countWords" $ do
         receivedData <- jsonData :: ActionM ReceivedData
         json $ makeData receivedData
+    get "/employees" $ do
+        json $ e1
 
 appCorsResourcePolicy :: CorsResourcePolicy
 appCorsResourcePolicy =
@@ -41,3 +43,15 @@ appCorsResourcePolicy =
         , corsRequestHeaders = ["Authorization", "Content-Type"]
         }
 
+data Employee = Employee
+  { id :: Int
+  , firstName :: String
+  , lastName :: String
+  , email :: String
+  , departmentcode :: Int
+  } deriving (Show, Generic)
+
+instance ToJSON Employee
+
+e1 :: [Employee]
+e1 = [Employee 1 "Børge" "Børgesen" "uwu@glomp.com" 69, Employee 2 "Børge" "Børgesen" "uwu@glomp.com" 69]
